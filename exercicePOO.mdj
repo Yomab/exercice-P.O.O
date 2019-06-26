@@ -63,7 +63,7 @@
 											"top": 55,
 											"width": 183,
 											"height": 13,
-											"text": "employé"
+											"text": "Employé"
 										},
 										{
 											"_type": "LabelView",
@@ -135,7 +135,7 @@
 											"top": 78,
 											"width": 183,
 											"height": 13,
-											"text": "-boulasse",
+											"text": "-Boulasse",
 											"horizontalAlignment": 0
 										},
 										{
@@ -152,7 +152,7 @@
 											"top": 93,
 											"width": 183,
 											"height": 13,
-											"text": "-roger",
+											"text": "-Roger",
 											"horizontalAlignment": 0
 										},
 										{
@@ -203,7 +203,7 @@
 											"top": 131,
 											"width": 183,
 											"height": 13,
-											"text": "+travailler()",
+											"text": "+Travailler()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -297,7 +297,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -624,
-											"top": 278,
+											"top": 262,
 											"height": 13
 										},
 										{
@@ -308,10 +308,10 @@
 											},
 											"font": "Arial;13;1",
 											"left": 125,
-											"top": 223,
+											"top": 215,
 											"width": 147.4052734375,
 											"height": 13,
-											"text": "cadre"
+											"text": "Cadre"
 										},
 										{
 											"_type": "LabelView",
@@ -321,10 +321,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 125,
-											"top": 238,
+											"top": 230,
 											"width": 147.4052734375,
 											"height": 13,
-											"text": "(from employé)"
+											"text": "(from Employé)"
 										},
 										{
 											"_type": "LabelView",
@@ -335,14 +335,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -624,
-											"top": 278,
+											"top": 262,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 120,
-									"top": 216,
+									"top": 208,
 									"width": 157.4052734375,
 									"height": 40,
 									"stereotypeLabel": {
@@ -379,16 +379,16 @@
 											},
 											"font": "Arial;13;0",
 											"left": 125,
-											"top": 261,
+											"top": 253,
 											"width": 147.4052734375,
 											"height": 13,
-											"text": "-avoir des responsabilités",
+											"text": "-avoirDesResponsabilités",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 120,
-									"top": 256,
+									"top": 248,
 									"width": 157.4052734375,
 									"height": 23
 								},
@@ -403,7 +403,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 120,
-									"top": 279,
+									"top": 271,
 									"width": 157.4052734375,
 									"height": 10
 								},
@@ -419,7 +419,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -312,
-									"top": 139,
+									"top": 131,
 									"width": 10,
 									"height": 10
 								},
@@ -435,7 +435,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -312,
-									"top": 139,
+									"top": 131,
 									"width": 10,
 									"height": 10
 								}
@@ -443,7 +443,7 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 120,
-							"top": 216,
+							"top": 208,
 							"width": 157.4052734375,
 							"height": 73,
 							"showNamespace": true,
@@ -471,7 +471,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "employé",
+					"name": "Employé",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -479,7 +479,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFrkrv8qnXsbfw="
 							},
-							"name": "cadre",
+							"name": "Cadre",
 							"attributes": [
 								{
 									"_type": "UMLAttribute",
@@ -487,9 +487,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFrks53uHY2N5s="
 									},
-									"name": "avoir des responsabilités",
-									"visibility": "private",
-									"type": ""
+									"name": "avoirDesResponsabilités",
+									"visibility": "private"
 								}
 							]
 						}
@@ -501,7 +500,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFrkrv8qnXsbfw="
 							},
-							"name": "boulasse",
+							"name": "Boulasse",
 							"visibility": "private"
 						},
 						{
@@ -510,7 +509,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFrkrv8qnXsbfw="
 							},
-							"name": "roger",
+							"name": "Roger",
 							"visibility": "private"
 						},
 						{
@@ -520,7 +519,8 @@
 								"$ref": "AAAAAAFrkrv8qnXsbfw="
 							},
 							"name": "1500",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -530,7 +530,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFrkrv8qnXsbfw="
 							},
-							"name": "travailler"
+							"name": "Travailler"
 						}
 					]
 				}
