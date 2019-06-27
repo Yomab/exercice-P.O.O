@@ -9,10 +9,14 @@
 class BankAccount
 {
     private $accountOwner;
-    private $sold = 1000;
+    private $sold ;
     private $interestRate;
     private $devise;
-    public function __construct() {
+    public function __construct($newOwner , $newSoldCred , $newRate , $newMoneyDev) {
+      $this->accountOwner = $newOwner;
+      $this->sold = $newSoldCred;
+      $this->interestRate = $newRate;
+      $this->devise  =$newMoneyDev;
     }
     public function add() {
         $this->sold = $this->sold +250 ;
@@ -58,27 +62,24 @@ class BankAccount
     }
 }
 
-$bankAccount =new BankAccount();
+$bankAccount =new BankAccount('jean ' , 12000 , 2 , 'dollar');
 $newSold = $bankAccount->add();
-echo 'le nouveau solde est de ' . $newSold ;
-
-$newSold = $bankAccount->debit();
-echo 'le nouveau solde est de ' . $newSold;
-
-
-
-$bankAccount->_setAccountOwner();
-echo $bankAccount->accountOwner();
-
-$bankAccount->_setSold();
-echo $bankAccount->sold();
-
-$bankAccount->_setInterestRate();
-echo $bankAccount->interestRate();
-
-$bankAccount->_setdevise();
-echo $bankAccount->devise();
-
 ?>
+ <p> <?= 'le nouveau solde est de ' . $newSold . ' euro';?></p>
+ <?php
+$newSold = $bankAccount->debit();
+?>
+<p> <?= 'le nouveau solde est de ' . $newSold . ' euro'; ?></p>
+
+
+<p> Le titulaire du compte est : <?= $bankAccount->accountOwner();?></p>
+
+<p>Votre solde est de : <?= $bankAccount->sold(); ?> euro</p>
+
+<p>Votre taux d'intêret est de : <?= $bankAccount->interestRate(); ?></p>
+
+<p>La devise de votre pays est l'<?= $bankAccount->devise();?></p>
+
+
 </body>
 </html>
