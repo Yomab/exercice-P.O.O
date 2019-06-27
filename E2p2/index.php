@@ -18,14 +18,6 @@ class BankAccount
       $this->interestRate = $newRate;
       $this->devise  =$newMoneyDev;
     }
-    public function add() {
-        $this->sold = $this->sold +250 ;
-        return $this->sold;
-    }
-    public function debit() {
-        $this->sold = $this->sold -250 ;
-        return $this->sold;
-    }
     public function _setAccountOwner()
     {
         $this->accountOwner = 'Mr Biniou';
@@ -36,7 +28,7 @@ class BankAccount
     }
     public function _setSold()
     {
-        $this->sold = '1000';
+        $this->sold = '0';
     }
 
     public function sold() {
@@ -60,26 +52,35 @@ class BankAccount
     public function devise() {
       return $this->devise;
     }
+    public function add() {
+        $this->sold = $this->sold +1250 ;
+        return $this->sold;
+    }
+    public function debit() {
+        $this->sold = $this->sold -500 ;
+        return $this->sold;
+    }
+
 }
 
-$bankAccount =new BankAccount('jean ' , 12000 , 2 , 'dollar');
-$newSold = $bankAccount->add();
+$bankAccount =new BankAccount('Ariel ' , 10000 , 1.9 , 'euros');
+
 ?>
- <p> <?= 'le nouveau solde est de ' . $newSold . ' euro';?></p>
- <?php
+
+
+
+<p> Bonjour <?= $bankAccount->accountOwner();?></p>
+<p>Vous venez d'ouvrir un compte avec un taux d'intérêt de <?= $bankAccount->interestRate(); ?> %</p>
+<p>Vous y avez déposé un montant de <?= $bankAccount->sold(); ?> euros</p>
+
+<?php $newSold = $bankAccount->add(); ?>
+
+
+<p> <?= 'Vous venez de crédité 1250 euros et le nouveau solde est de ' . $newSold . ' euro';?></p>
+<?php
 $newSold = $bankAccount->debit();
 ?>
-<p> <?= 'le nouveau solde est de ' . $newSold . ' euro'; ?></p>
-
-
-<p> Le titulaire du compte est : <?= $bankAccount->accountOwner();?></p>
-
-<p>Votre solde est de : <?= $bankAccount->sold(); ?> euro</p>
-
-<p>Votre taux d'intêret est de : <?= $bankAccount->interestRate(); ?></p>
-
-<p>La devise de votre pays est l'<?= $bankAccount->devise();?></p>
-
+<p> <?= 'Vous venez de débité 500 euros et le nouveau solde est de ' . $newSold . ' euro'; ?></p>
 
 </body>
 </html>
